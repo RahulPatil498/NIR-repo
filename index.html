@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Value Subtraction Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>NIR Milk Analyser</h1>
+      <p>Subtract values from the 30th value in a 100-value input</p>
+    </header>
+
+    <main>
+      <label for="inputValues">Enter 100 comma-separated values:</label>
+      <textarea id="inputValues" placeholder="e.g., 1, 2, 3, ..., 100"></textarea>
+      <button onclick="submitValues()"><i class="fas fa-calculator"></i> Calculate</button>
+      <div class="output" id="output"></div>
+      <button id="copyBtn" class="copy-button" onclick="copyOutput()" style="display: none;"><i class="fas fa-copy"></i> Copy Output</button>
+    </main>
+
+    <footer>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="themeSwitch" onchange="toggleTheme()">
+          <span class="slider round"></span>
+        </label>
+        <span id="themeText">Light Mode</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
